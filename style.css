@@ -11,7 +11,8 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* elimina la barra de scroll */
+  overflow-x: hidden; /* elimina la barra de scroll */
+  overflow-y: auto;
 }
 
 
@@ -133,4 +134,54 @@ footer {
   .grid { grid-template-columns: 1fr; }
   .actions { flex-direction: column; align-items: stretch; }
   button { width: 100%; }
+}
+
+/* --- Adaptación a pantallas pequeñas --- */
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 16px;
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .lead {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  .lead {
+    font-size: 0.9rem;
+  }
 }
