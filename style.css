@@ -43,6 +43,7 @@ body {
 
 
 .card {
+  margin-top: 120px;
   width: 100%;
   max-width: 1080px;
   background: url(https://i.imgur.com/ygJS2wR.png);
