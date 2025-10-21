@@ -15,7 +15,6 @@ html, body {
   overflow-y: auto;
 }
 
-
 body {
   min-height: 100vh;
   margin: 0;
@@ -40,7 +39,6 @@ body {
   justify-content: flex-start;
   padding-top: 150px; /* mueve la calculadora más abajo */
 }
-
 
 .card {
   margin-top: 120px;
@@ -151,14 +149,20 @@ footer {
 @media (max-width: 768px) {
   body {
     padding: 12px;
-  body::before {
-    background: url('https://i.imgur.com/TU_IMAGEN_MOVIL.jpg') center center / cover no-repeat;
-  .card {
-    margin-top: 25vh; /* o el valor que prefieras */
-  }
   }
 
+  /* Fondo distinto en celulares */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('https://i.imgur.com/TU_IMAGEN_MOVIL.jpg') center center / cover no-repeat;
+    z-index: -1;
+  }
+
+  /* Mover calculadora más abajo */
   .card {
+    margin-top: 25vh; /* o ajustá el valor que prefieras */
     padding: 16px;
     max-width: 100%;
     box-shadow: none;
@@ -197,6 +201,7 @@ footer {
   h1 {
     font-size: 1.4rem;
   }
+
   .lead {
     font-size: 0.9rem;
   }
