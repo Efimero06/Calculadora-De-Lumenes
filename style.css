@@ -136,7 +136,7 @@ footer {
 /* --- Ajustes para pantallas medianas y móviles --- */
 @media (max-width: 768px) {
   body {
-    padding-top: 80px;
+    padding-top: 50px;
     justify-content: flex-start;
     align-items: center;
   }
@@ -150,7 +150,7 @@ footer {
   }
 
   .card {
-    margin-top: 15vh;
+    margin-top: 25vh;
     padding: 16px;
     max-width: 100%;
     box-shadow: none;
