@@ -180,9 +180,3 @@ footer {
   h1 { font-size: 1.4rem; }
   .lead { font-size: 0.9rem; }
 }
-
-@media (max-width: 480px) {
-  h1 { font-size: 1.4rem; }
-  .lead { font-size: 0.9rem; }
-}
-
