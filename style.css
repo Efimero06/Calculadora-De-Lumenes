@@ -146,6 +146,11 @@ footer {
 @media (max-width: 768px) {
   body {
     padding: 12px;
+  body::before {
+    background: url('https://i.imgur.com/TU_IMAGEN_MOVIL.jpg') center center / cover no-repeat;
+  .card {
+    margin-top: 25vh; /* o el valor que prefieras */
+  }
   }
 
   .card {
