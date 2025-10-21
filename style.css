@@ -44,8 +44,8 @@ body::after {
   border-radius: 12px;
   box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.04);
-  margin-top: env(safe-area-inset-top, 80px); /* margen seguro para notch o barra */
-  margin-bottom: 40px;
+  margin-top: env(safe-area-inset-top, 120px); /* margen seguro para notch o barra */
+  margin-bottom: 80px;
 }
 
 h1 {
