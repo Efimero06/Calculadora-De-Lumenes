@@ -136,18 +136,18 @@ footer {
 /* --- Ajustes para pantallas medianas y móviles --- */
 @media (max-width: 768px) {
   body {
-    padding-top: 140px;
+    padding-top: 180px; /* aumenta un poco más el espacio arriba */
     justify-content: flex-start;
     align-items: center;
 
-    /* 🔥 Cambiamos el fondo completo en celulares */
+    /* Fondo para móviles */
     background: url(https://i.imgur.com/nWVKrkc.gif) center center / cover no-repeat fixed;
-    background-attachment: scroll; /* más compatible con móviles */
+    background-attachment: scroll;
     background-color: #0d0d0d;
   }
 
   .card {
-    margin-top: 6vh;
+    margin-top: 0; /* eliminamos margen innecesario */
     padding: 16px;
     max-width: 100%;
     box-shadow: none;
@@ -169,8 +169,16 @@ footer {
   }
 
   label { font-size: 0.9rem; }
-
   footer { font-size: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 200px; /* un poquito más para pantallas muy chicas */
+  }
+
+  h1 { font-size: 1.4rem; }
+  .lead { font-size: 0.9rem; }
 }
 
 @media (max-width: 480px) {
