@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de Lúmenes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Calculadora de Lúmenes</h1>
+    <p class="lead">Introduce el tipo de ambiente y las dimensiones para obtener los lúmenes necesarios. También podés comprobar la iluminación instalada.</p>
+
+    <div class="grid">
+      <div>
+        <label for="tipo">Tipo de habitación</label>
+        <select id="tipo">
+          <option value="dormitorio">Dormitorio — 150 lux</option>
+          <option value="sala">Sala/Estar — 250 lux</option>
+          <option value="cocina">Cocina — 400 lux</option>
+          <option value="oficina">Oficina/Estudio — 500 lux</option>
+          <option value="baño">Baño — 200 lux</option>
+          <option value="taller">Taller/Precisión — 800 lux</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="altura">Altura del techo (m) <span class="muted">(opcional)</span></label>
+        <input type="number" id="altura" placeholder="ej: 2.7" step="0.01" min="0">
+      </div>
+
+      <div>
+        <label for="largo">Largo (m)</label>
+        <input type="number" id="largo" placeholder="ej: 4" step="0.01" min="0">
+      </div>
+
+      <div>
+        <label for="ancho">Ancho (m)</label>
+        <input type="number" id="ancho" placeholder="ej: 3" step="0.01" min="0">
+      </div>
+
+      <div class="full">
+        <label for="num_lamparas">¿Querés comparar con lámparas instaladas?</label>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <input type="number" id="num_lamparas" placeholder="Cantidad de lámparas" min="0" style="width:150px">
+          <input type="number" id="lm_por_lampara" placeholder="Lúmenes por lámpara (lm)" min="0" style="width:220px">
+          <button id="auto_fill" class="secondary">Ejemplo: 8 lámparas × 800 lm</button>
+        </div>
+        <p class="muted" style="margin-top:8px">Si no querés comparar, dejá en blanco la cantidad de lámparas.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="calcular">Calcular</button>
+      <button id="limpiar" class="secondary">Limpiar</button>
+      <button id="copiar" class="secondary">Copiar resultado</button>
+    </div>
+
+    <section id="salida" class="result" aria-live="polite" hidden>
+      <div class="row"><div class="muted">Área</div><div id="area_txt">-</div></div>
+      <div class="row"><div class="muted">Nivel recomendado</div><div id="lux_txt">-</div></div>
+      <div class="row"><div class="muted">Lúmenes necesarios</div><div id="lumenes_txt">-</div></div>
+      <div class="row" id="instalado_row" style="display:none"><div class="muted">Lúmenes instalados</div><div id="instalado_txt">-</div></div>
+      <div class="row" id="comparacion_row" style="display:none"><div class="muted">Resultado</div><div id="comparacion_txt">-</div></div>
+    </section>
+
+    <footer>• Integrantes: <code>Massad A.; Mangini B.; Larsen A.; Peloso M.</code>- 4º1º ELM.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
