@@ -136,7 +136,7 @@ footer {
 /* --- Ajustes para pantallas medianas y móviles --- */
 @media (max-width: 768px) {
   body {
-    padding-top: 180px; /* aumenta un poco más el espacio arriba */
+    padding-top: 10px; /* aumenta un poco más el espacio arriba */
     justify-content: flex-start;
     align-items: center;
 
