@@ -136,7 +136,7 @@ footer {
 /* --- Ajustes para pantallas medianas y móviles --- */
 @media (max-width: 768px) {
   body {
-    padding-top: 500px; /* aumenta un poco más el espacio arriba */
+    padding-top: calc(140px + 4vh); /* aumenta un poco más el espacio arriba */
     justify-content: flex-start;
     align-items: center;
 
@@ -174,23 +174,11 @@ footer {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 200px; /* un poquito más para pantallas muy chicas */
+    padding-top: calc(160px + 5vh); /* un poquito más para pantallas muy chicas */
   }
 
   h1 { font-size: 1.4rem; }
   .lead { font-size: 0.9rem; }
 
-}
-/* Ajuste dinámico para evitar que el contenido se corte detrás del header */
-@media (max-width: 768px) {
-  body {
-    padding-top: calc(140px + 4vh); /* se ajusta según la altura visible del dispositivo */
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding-top: calc(160px + 5vh); /* un poco más para pantallas muy pequeñas */
-  }
 }
 
