@@ -142,9 +142,7 @@ footer {
 
     /* 🔥 Cambiamos el fondo completo en celulares */
     background: url(https://i.imgur.com/nWVKrkc.gif) center center / cover no-repeat fixed;
-    background-position: top center;
     background-attachment: scroll; /* más compatible con móviles */
-    background-size: cover;
     background-color: #0d0d0d;
   }
 
