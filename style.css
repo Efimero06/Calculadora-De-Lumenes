@@ -19,7 +19,11 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: url('https://i.imgur.com/NLQDor6.gif') center top / cover no-repeat fixed;
+  background: url(https://i.imgur.com/NLQDor6.gif) center top / cover no-repeat fixed;
+  background-position: top center;
+  background-attachment: fixed;
+  background-attachment: scroll;
+  background-size: cover;
   background-color: #0d0d0d;
   font-family: 'Poppins', sans-serif;
   color: #fff;
