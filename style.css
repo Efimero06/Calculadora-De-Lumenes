@@ -21,7 +21,6 @@ body {
   padding: 0;
   background: url(https://i.imgur.com/NLQDor6.gif) center top / cover no-repeat fixed;
   background-position: top center;
-  background-attachment: fixed;
   background-attachment: scroll;
   background-size: cover;
   background-color: #0d0d0d;
@@ -32,6 +31,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   padding-top: 150px;
+  transition: background 0.4s ease-in-out;
 }
 
 .card {
@@ -139,14 +139,11 @@ footer {
     padding-top: 80px;
     justify-content: flex-start;
     align-items: center;
-  }
 
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url(https://i.imgur.com/nWVKrkc.gif) center center / cover no-repeat;
-    z-index: -1;
+    /* 🔥 Cambiamos el fondo completo en celulares */
+    background: url(https://i.imgur.com/nWVKrkc.gif) center center / cover no-repeat fixed;
+    background-attachment: scroll; /* más compatible con móviles */
+    background-color: #0d0d0d;
   }
 
   .card {
