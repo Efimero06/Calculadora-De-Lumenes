@@ -179,4 +179,18 @@ footer {
 
   h1 { font-size: 1.4rem; }
   .lead { font-size: 0.9rem; }
+
 }
+/* Ajuste dinámico para evitar que el contenido se corte detrás del header */
+@media (max-width: 768px) {
+  body {
+    padding-top: calc(140px + 4vh); /* se ajusta según la altura visible del dispositivo */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: calc(160px + 5vh); /* un poco más para pantallas muy pequeñas */
+  }
+}
+
