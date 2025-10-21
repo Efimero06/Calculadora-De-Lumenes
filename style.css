@@ -11,39 +11,32 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* elimina la barra de scroll */
-  overflow-y: auto;
-}
-
-
-body {
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
-
-  /* Fondo */
-  background: url('https://i.imgur.com/NLQDor6.gif') center top / cover no-repeat fixed;
-  background-color: #0d0d0d; /* color de respaldo si el gif no carga */
-  
-  /* Tipografía y color base */
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-
-  /* Permitir scroll */
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  /* Espaciado para que el logo se vea completo */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 150px; /* mueve la calculadora más abajo */
+  background-color: #0f1724;
+  color: #e6eef6;
+  font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent; /* saca el destello al tocar */
 }
 
+/* Fondo fijo compatible con móviles */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('https://i.imgur.com/NLQDor6.gif') center top / cover no-repeat;
+  z-index: -2;
+}
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 36, 0.7);
+  z-index: -1;
+}
+
+/* Contenedor principal */
 .card {
-  margin-top: 120px;
   width: 100%;
   max-width: 1080px;
   background: url(https://i.imgur.com/ygJS2wR.png);
@@ -51,6 +44,8 @@ body {
   border-radius: 12px;
   box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.04);
+  margin-top: env(safe-area-inset-top, 80px); /* margen seguro para notch o barra */
+  margin-bottom: 40px;
 }
 
 h1 {
